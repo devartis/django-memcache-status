@@ -3,7 +3,7 @@ from django.conf import settings
 from django.core.cache import get_cache
 
 if get_cache.__module__.startswith('debug_toolbar'):
-    from debug_toolbar.panels.cache import base_get_cache as get_cache
+    from debug_toolbar.panels.cache import original_get_cache as get_cache
 
 register = template.Library()
 
